@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Kayra Sacan</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com">
     </head>
     <body>
@@ -27,7 +27,7 @@
 
         <div class="quote">
             <p>
-                {{ generated_text }}
+                " {{ generated_text }} "
             </p>
             <p>
                 This quote was generated from a neural network LLM trained on Dostoyevsky
@@ -71,7 +71,7 @@
 
             <div class="about">
                 <h2>About</h2>
-                <img src="assets/images/pfp.jpg" class="pfp" alt="Profile picture">
+                <img src="{{ url_for('static', filename='images/pfp.jpg') }}" class="pfp" alt="Profile picture">
                 <p>
                     Experience in various programming languages and frameworks, including Python, R, C#, React JS, Flask, Matlab, and more. 
                     Dedicated to creating innovative solutions and contributing to the field of technology through projects that leverage data and machine learning techniques.
