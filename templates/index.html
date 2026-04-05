@@ -27,9 +27,9 @@
 
         <div class="quote">
             <p>
-                " <span id="quote">{{ generated_text }}</span> "
-                <button id="reload">&#x21BA;</button>
+                <blockquote id="quote" class="gen-text">{{ generated_text }}</blockquote>
             </p>
+            <button id="reload" class="reload">&#x21BA;</button>
             <p>
                 This quote was generated from a neural network LLM trained on Dostoyevsky
             </p>
@@ -40,6 +40,10 @@
 
         <div class="projects">
             <h2>Projects</h2>
+
+            <!--TODO: have some sort of visual element... eg. preview of each project-->
+
+
             <ul>
                 <li>
                     <a href="#">O-fishally Organized</a>
@@ -74,8 +78,8 @@
                 <h2>About</h2>
                 <img src="{{ url_for('static', filename='images/pfp.jpg') }}" class="pfp" alt="Profile picture">
                 <p>
-                    Experience in various programming languages and frameworks, including Python, R, C#, React JS, Flask, Matlab, and more. 
-                    Dedicated to creating innovative solutions and contributing to the field of technology through projects that leverage data and machine learning techniques.
+                    Kayra is experienced in various programming languages and frameworks, including Python, R, C#, React JS, Flask, Matlab, and more. 
+                    She is dedicated to creating innovative solutions and contributing to the field of technology through projects that leverage data and machine learning techniques.
                 </p>
             </div>
         </div>

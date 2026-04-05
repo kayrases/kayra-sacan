@@ -1,24 +1,137 @@
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
+/*-------------------------color variables-------------------------*/
+
+/* css variables for colors */
+:root {
+    --primary-color: #6576B8;
+    --secondary-color: #E0E2DF;
+    --accent-color: #A94136;
+    --text-color: #121616;
+    --background-color: #EAF4F4;
+
+    --highlight-color: #ffb7b7;
 }
+
+/* override for dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #7a73c0;
+        --secondary-color: #1c2121;
+        --accent-color: #e38d83;
+        --text-color: #EAF4F4;
+        --background-color: #121616;
+
+        --highlight-color: #4e7474b7;
+    }
+}
+
+/*-------------------------body/header styles-------------------------*/
 
 @font-face {
     font-family: "Dumbledor";
     src: url("/fonts/dumbledor.ttf") format("opentype");
 }
 
+::selection {
+    background: var(--highlight-color);
+}
+
+/*Firefox support for highlight color*/
+::-moz-selection {
+    background: var(--highlight-color);
+  }
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header { 
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+h1 { 
+    color: var(--primary-color);
+    padding-top: 60px;
+    text-align: center;
+}
+
+h2 {
+
+}
+
+p {
+
+}
+
+a:link {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    border: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--secondary-color);
+}
+
+button:hover{
+    background-color: var(--accent-color);
+    border: var(--accent-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--secondary-color);
+}
+
+/*-------------------------images-------------------------*/
 
 .pfp { 
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #fff;
+    border: 5px solid var(--primary-color);
 }
 
-/* -------------------------Responsive to mobile------------------------- */
+/*-------------------------divs-------------------------*/
+
+.quote {
+    text-align: center;
+}
+
+.reload {
+    cursor: pointer;
+}
+
+.gen-text { 
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+blockquote {
+    quotes: "“" "”" "‘" "’";
+  }
+
+blockquote::before {
+    content: open-quote;
+}
+  
+blockquote::after {
+    content: close-quote;
+}
+
+/*-------------------------responsive to mobile------------------------- */
 @media (max-width: 768px) {
     
 }
