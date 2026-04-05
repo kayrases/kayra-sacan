@@ -27,7 +27,8 @@
 
         <div class="quote">
             <p>
-                " {{ generated_text }} "
+                " <span id="quote">{{ generated_text }}</span> "
+                <button id="reload">&#x21BA;</button>
             </p>
             <p>
                 This quote was generated from a neural network LLM trained on Dostoyevsky
@@ -78,5 +79,16 @@
                 </p>
             </div>
         </div>
+        
+        <script>
+            const btn = document.getElementById("reload");
+            const quote = document.getElementById("quote");
+        
+            btn.addEventListener("click", async () => {
+                const response = await fetch("/quote");
+                const data = await response.json();
+                quote.textContent = data.generated_text;
+            });
+        </script>
     </body>
 </html>
