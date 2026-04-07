@@ -9,15 +9,9 @@
     <body>
         
         <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="#">LinkedIn</a>
-                    </li>
-                </ul>
+            <nav class="icons">
+                <a href="#"><img src="{{ url_for('static', filename='images/github.png') }}" class="icon"></a>
+                <a href="#"><img src="{{ url_for('static', filename='images/linkedin.png') }}" class="icon"></a>
             </nav>
         </header>
 
@@ -38,50 +32,76 @@
             </p>
         </div>
 
-        <div class="projects">
-            <h2>Projects</h2>
+        <div class="qualifications"></div>
+            <h2>Experience</h2>
+            <h3>Research</h3>
+            <p>From April 2026 - August 28th</p>
 
-            <!--TODO: have some sort of visual element... eg. preview of each project-->
+            <div class="projects">
+                <h2>Projects</h2>
 
+                <!--TODO: have some sort of visual element... eg. preview of each project-->
 
+                <ul>
+                    <li>
+                        <a href="#">O-fishally Organized</a>
+                        <p>React JS</p>
+                    </li>
+                    <li>
+                        <a href="#">Simple Writing</a>
+                        <p>Python (Flask)</p>
+                        <p>Neural networking LLM</p>
+                        <p>A simple</p>
+                    </li>
+                    <li>
+                        <a href="#">TODO: Breakpoints</a>
+                        <p>???</p>
+                        <p>Creates breakpoints in text based on where an image falls</p>
+                    </li>
+                    <li>
+                        <a href="#">TODO: Credit Score</a>
+                        <p>C#</p>
+                        <p>Machine Learning</p>
+                        <p>Predicts a user's credit score using various datapoints</p>
+                    </li>
+                    <li>
+                        <a href="#">TODO: Fox/Bunny</a>
+                        <p>Matlab</p>
+                        <p>Displays graphs of populations of foxes and bunnies over time</p>
+                    </li>
+                    <li>
+                        <a href="#">TODO: Cheapest Path</a>
+                        <p>Matlab</p>
+                        <p>Finds the cheapest path through a map of points</p>
+                    </li>
+                    <li>
+                        <a href="#">TODO: NYT Games Data</a>
+                        <p>R/RStudio</p>
+                        <p>SQLite database</p>
+                        <p>Does NYT Games WORDLE use significantly more 5-letter words that are in the top 25% most common words?</p>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Relevant Coursework</h2>
+            <h3>GPA: 3.95</h3>
             <ul>
                 <li>
-                    <a href="#">O-fishally Organized</a>
-                    <p>React JS</p>
+                    <p>4.0 - CS171 / CS172 Intro to Coding in Python</p>
                 </li>
                 <li>
-                    <a href="#">Simple Writing</a>
-                    <p>Python (Flask)</p>
-                    <p>Neural networking LLM</p>
-                </li>
-                <li>
-                    <a href="#">TODO: Breakpoints</a>
-                    <p>???</p>
-                    <p>Creates breakpoints in text based on where an image falls</p>
-                </li>
-                <li>
-                    <a href="#">TODO: Credit Score</a>
-                    <p>C#</p>
-                    <p>Machine Learning</p>
-                </li>
-                <li>
-                    <a href="#">TODO: Fox/Bunny</a>
-                    <p>Matlab</p>
-                </li>
-                <li>
-                    <a href="#">TODO: NYT Data</a>
-                    <p>R/RStudio</p>
+                    <p>4.0 - CI102 / CI103 Group Project using Git & Agile Methodology</p>
                 </li>
             </ul>
+        </div>
 
-            <div class="about">
-                <h2>About</h2>
-                <img src="{{ url_for('static', filename='images/pfp.jpg') }}" class="pfp" alt="Profile picture">
-                <p>
-                    Kayra is experienced in various programming languages and frameworks, including Python, R, C#, React JS, Flask, Matlab, and more. 
-                    She is dedicated to creating innovative solutions and contributing to the field of technology through projects that leverage data and machine learning techniques.
-                </p>
-            </div>
+        <div class="about">
+            <h2>About</h2>
+            <img src="{{ url_for('static', filename='images/pfp.jpg') }}" class="pfp" alt="Profile picture">
+            <p>
+                Kayra is experienced in various programming languages and frameworks, including Python, R, C#, React JS, Flask, Matlab, and more. 
+                She is dedicated to creating innovative solutions and contributing to the field of technology through projects that leverage data and machine learning techniques.
+            </p>
         </div>
         
         <script>
